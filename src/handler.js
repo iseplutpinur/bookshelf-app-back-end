@@ -10,7 +10,7 @@ const addBookHandler = (request, h) => {
   const updatedAt = createdAt;
 
   const newBook = {
-    title, categories, author, publisher, year, id, createdAt, updatedAt,
+    title, categories, author, publisher, year: parseInt(year, 10), id, createdAt, updatedAt,
   };
 
   books.push(newBook);
@@ -85,7 +85,7 @@ const editBookByIdHandler = (request, h) => {
       categories,
       author,
       publisher,
-      year,
+      year: parseInt(year, 10),
       updatedAt,
     };
 
